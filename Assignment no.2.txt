@@ -9,7 +9,7 @@ ANS : Names for Row :- tuple,entity,opportunity
       Names for Column :-  attribute,method
                    
 Q.4 why isn't it possible to see the first five rows of a table?
-ANS : yes we can see first five rows.
+ANS :
       When you select  a table the order of rows in the output, depends on the row address.
       It will always be in Ascending order of row address.
       When you update a row if the row length is increasing then the entire may be moved to some other address.
