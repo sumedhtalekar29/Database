@@ -16,4 +16,4 @@ ans. select rating,cname from customers where city="San Jose";
 
 5) Write a query that will produce the snum values of all salespeople (suppress the
 duplicates) with orders in the Orders table.
-ans. select distinct snum from orders order by snum;
+ans. select distinct snum,onum from orders;
