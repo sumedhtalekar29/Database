@@ -1,0 +1,24 @@
+1) Write a query that lists each order number followed by the name of the customer
+who made the order.
+ans. select onum,Cname from orders ,customers  where customers.Cnum=orders.Cnum;
+
+--------------------------------------------------------------------------------------------
+
+2) Write a query that gives the names of both the salesperson and the customer for
+each order along with the order number.
+ans. select sname,cname,onum from orders,customers,salespeople 
+     where orders.snum=customers.snum and customers.snum=salespeople.snum;
+
+-------------------------------------------------------------------------------------------------
+3) Write a query that produces all customers serviced by salespeople with a
+commission above 12%. Output the customer’s name, the salesperson’s name,
+and the salesperson’s rate of commission.
+ans. SELECT cname,salespeople.snum,comm*100 "RATE OF COMM."
+     FROM customers,salespeople WHERE customers.snum=salespeople.snum;
+
+-------------------------------------------------------------------------------------------------
+4) Write a query that calculates the amount of the salesperson’s commission on each
+order by a customer with a rating above 100.
+ans. SELECT AMT,COMM FROM CUSTOMERS,ORDERS,SALESPEOPLE
+	WHERE CUSTOMERS.SNUM = ORDERS.SNUM
+	AND ORDERS.SNUM = SALESPEOPLE.SNUM
